@@ -1,12 +1,12 @@
 import {useEffect, useState } from "react";
 
 const useFetch = (search) => {
-    console.log("search", search);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
     useEffect(() => {
+        console.log("search", search);
         fetch(`https://mdblist.p.rapidapi.com?s=${search}`, {
             method: "GET",
             headers: {
